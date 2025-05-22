@@ -1,10 +1,3 @@
-/**
- ******************************************************************************
- * @file           : room_control.h
- * @author         : Sam C
- * @brief          : Header file for Room Control Application
- ******************************************************************************
- */
 #ifndef ROOM_CONTROL_H
 #define ROOM_CONTROL_H
 
@@ -28,5 +21,12 @@ void room_control_on_uart_receive(char received_char);
  *        Las inicializaciones de periféricos se harán en main().
  */
 void room_control_app_init(void);
+
+/**
+ * @brief Función periódica que debe ser llamada regularmente (por ejemplo en SysTick_Handler o main loop).
+ *        Se encarga de tareas temporizadas como apagar el LED tras 3 segundos.
+ */
+void room_control_process(void);
+
 
 #endif // ROOM_CONTROL_H

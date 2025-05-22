@@ -1,10 +1,3 @@
-/**
- ******************************************************************************
- * @file           : systick.h
- * @author         : Sam C
- * @brief          : Header file for SysTick driver for STM32L476RGTx
- ******************************************************************************
- */
 #ifndef SYSTICK_H
 #define SYSTICK_H
 
@@ -21,7 +14,7 @@ typedef struct {
 #define SYSTICK_BASE        (0xE000E010UL)
 #define SysTick             ((SysTick_TypeDef *)SYSTICK_BASE)
 
-
+// Prototipos de funciones
 void systick_init_1ms(void);
 uint32_t systick_get_tick(void);
 void systick_delay_ms(uint32_t ms);
